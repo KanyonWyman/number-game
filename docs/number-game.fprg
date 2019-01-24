@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="kanyon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-01-24 01:40:25 PM"/>
+        <attribute name="created" value="a2FueW9uO01TSTsyMDE5LTAxLTI0OzEwOjQwOjMyIEFNOzIxNDc="/>
+        <attribute name="edited" value="a2FueW9uO01TSTsyMDE5LTAxLTI0OzAxOjQwOjI1IFBNOzE7MjI3Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="repeat" type="Boolean" array="False" size=""/>
+            <declare name="secret" type="Integer" array="False" size=""/>
+            <declare name="guess" type="Integer" array="False" size=""/>
+            <assign variable="secret" expression="random(100) +1"/>
+            <output expression="&quot;Guess a number between 1 - 100: &quot;" newline="True"/>
+            <do expression="guess != secret">
+                <input variable="guess"/>
+                <if expression="guess = 0">
+                    <then>
+                        <output expression="&quot;All you had to do was follow the train.&quot;" newline="True"/>
+                        <breakpoint/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="guess &gt; secret">
+                    <then>
+                        <output expression="&quot;Too damn high&quot;" newline="True"/>
+                        <output expression="&quot;Guess again&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="guess &lt; secret">
+                            <then>
+                                <output expression="&quot;Too low nerd.&quot;" newline="True"/>
+                                <output expression="&quot;Guess again&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </do>
+            <output expression="&quot;congratulation, you done it.&quot;" newline="True"/>
+            <output expression="(secret)" newline="True"/>
+            <output expression="&quot;Play again?: &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
