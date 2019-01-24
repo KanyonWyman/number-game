@@ -1,7 +1,8 @@
-import java.util.*;
-import java.lang.Math;
+package edu.cnm.deepdive;
+import java.util.Random;
+import java.util.Scanner;
 
-public class JavaApplication {
+public class NumberGame {
     private static Random random = new Random();
     private static Scanner input = new Scanner(System.in);
 
@@ -29,6 +30,5 @@ public class JavaApplication {
         } while (guess != secret);
         System.out.println("congratulation, you done it.");
         System.out.println(secret);
-        System.out.println("Play again?: ");
     }
 }
